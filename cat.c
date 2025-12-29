@@ -29,12 +29,11 @@ int main(int argc, char *argv[])
             if (fd < 0) {
                 perror(argv[i]);
                 exit_status = EXIT_FAILURE;
-                fprintf(stderr, "Skipping file: %s\n", argv[i]);
                 continue;
             }
         
-        do_cat(fd);
-        close(fd);
+            do_cat(fd);
+            close(fd);
         }
     }
 
