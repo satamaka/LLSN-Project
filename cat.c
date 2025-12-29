@@ -7,6 +7,8 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#define BUF_SIZE 4096
+
 void do_cat(int fd);
 
 int main(int argc, char *argv[])
@@ -41,7 +43,7 @@ int main(int argc, char *argv[])
 
 void do_cat(int fd)
 {
-    char buf[4096];
+    char buf[BUF_SIZE];
     ssize_t n;
 
     while (0 < (n = read(fd, buf, sizeof(buf)))) {
