@@ -56,6 +56,7 @@ void do_cp(int src_fd, int dest_fd)
 			if (n_written <= 0) {
 				die("write");
 			}
+			
 			n_read -= n_written;
 			ptr += n_written;
 		}
